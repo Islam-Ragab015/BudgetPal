@@ -25,14 +25,23 @@ class MyTextFormField extends StatelessWidget {
       obscureText: isObsecure,
       style: FontHelper.font18GreyW300,
       decoration: InputDecoration(
-          suffixIcon: suffixIcon,
-          hintText: hintText,
-          hintStyle: FontHelper.font18GreyW300,
-          filled: true,
-          fillColor: MyColors.greyColor,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(30),
-          )),
+        suffixIcon: suffixIcon,
+        hintText: hintText,
+        hintStyle: FontHelper.font18GreyW300,
+        filled: true,
+        fillColor: MyColors.greyColor,
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: MyColors.orangeColor, width: 2),
+          borderRadius: BorderRadius.circular(30),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: MyColors.greyColor, width: 1),
+          borderRadius: BorderRadius.circular(30),
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+      ),
     );
   }
 }
