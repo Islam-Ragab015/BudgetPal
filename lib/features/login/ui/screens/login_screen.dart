@@ -39,6 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: FontHelper.font16Regular.copyWith(
                     color: Colors.white
                         .withOpacity(0.7), // Slight opacity for less emphasis
+                    fontSize: 14,
                   ),
                 ),
               ),
@@ -50,9 +51,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     stops: [0.0, 1.0],
                     colors: [MyColors.orangeColor, MyColors.yellowColor]),
                 onPressed: () => validateThenLogin(context),
-                child: const Text(
+                child: Text(
                   'Login',
-                  style: FontHelper.font18BoldWhite,
+                  style: FontHelper.font18BoldWhite.copyWith(
+                    fontSize: 20,
+                    letterSpacing: 1.1,
+                  ),
                 ),
               ),
               verticalSpace(20), // Space before terms and conditions text
