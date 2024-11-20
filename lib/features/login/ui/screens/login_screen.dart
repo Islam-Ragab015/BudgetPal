@@ -2,8 +2,11 @@ import 'package:budget_pal/core/helpers/spacing.dart';
 import 'package:budget_pal/core/theming/fonts.dart';
 import 'package:budget_pal/core/theming/my_colors.dart';
 import 'package:budget_pal/core/widgets/my_button.dart';
+import 'package:budget_pal/features/login/logic/cubit/login_cubit.dart';
+import 'package:budget_pal/features/login/ui/widgets/build_bloc_listener.dart';
 import 'package:budget_pal/features/login/ui/widgets/dont_have_an_account.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../widgets/email_and_password.dart';
 import '../widgets/terms_and_conditions.dart';
 
@@ -37,14 +40,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               verticalSpace(50),
-              const MyButton(
-                  gradient: LinearGradient(
+              MyButton(
+                  gradient: const LinearGradient(
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                       stops: [0.0, 1.0],
                       colors: [MyColors.orangeColor, MyColors.yellowColor]),
-                  onPressed: null,
-                  child: Text(
+                  onPressed: () => validateThenLogin(context),
+                  child: const Text(
                     'Login',
                     style: FontHelper.font18BoldWhite,
                   )),
@@ -52,8 +55,15 @@ class _LoginScreenState extends State<LoginScreen> {
               const TermsAndConditions(),
               verticalSpace(20),
               const DontHaveAnAccount(),
+              const BuildBlocListener()
             ],
           ),
         )));
+  }
+
+  void validateThenLogin(BuildContext context) {
+    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+      context.read<LoginCubit>().login();
+    }
   }
 }

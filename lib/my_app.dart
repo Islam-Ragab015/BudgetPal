@@ -1,9 +1,11 @@
-import 'package:budget_pal/features/login/ui/screens/login_screen.dart';
+import 'package:budget_pal/core/routing/routes.dart';
+import 'package:budget_pal/core/routing/routing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final Routing routing;
+  const MyApp({super.key, required this.routing});
 
   // This widget is the root of your application.
   @override
@@ -18,7 +20,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const LoginScreen(),
+        initialRoute: Routes.login,
+        onGenerateRoute: routing.generateRoute,
       ),
     );
   }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1075171659796",
+    "project_id": "budget-pal-173cc",
+    "storage_bucket": "budget-pal-173cc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075171659796:android:a9dc73207110e7f4e29701",
+        "android_client_info": {
+          "package_name": "com.example.budget_pal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChzSi8qlY95mcSZ64bl6wx1dNHtJTGagw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
