@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 end: Alignment.bottomRight,
                 stops: [0.0, 0.5],
                 colors: [MyColors.redColor, MyColors.navyColor])),
-        child: Text("screens[currentIndex]"),
+        child: const Text("screens[currentIndex]"),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Container(

@@ -6,7 +6,7 @@ import 'package:budget_pal/core/widgets/my_button.dart';
 import 'package:budget_pal/features/login/logic/cubit/login_cubit.dart';
 import 'package:budget_pal/features/login/ui/widgets/build_bloc_listener.dart';
 import 'package:budget_pal/features/login/ui/widgets/dont_have_an_account.dart';
-import '../widgets/email_and_password.dart';
+import '../widgets/login_form_fireld.dart';
 import '../widgets/terms_and_conditions.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,7 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true, // Allow scrolling when keyboard is open
+      resizeToAvoidBottomInset: true,
       backgroundColor: MyColors.blackColor,
       body: SafeArea(
         child: SingleChildScrollView(
@@ -29,21 +29,20 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              verticalSpace(150), // Space before the content
-              const EmailAndPassword(),
-              verticalSpace(30), // Spacing for better readability
+              verticalSpace(100),
+              const LogInFormField(),
+              verticalSpace(30),
               Align(
                 alignment: Alignment.centerRight,
                 child: Text(
                   "Forgot Password?",
                   style: FontHelper.font16Regular.copyWith(
-                    color: Colors.white
-                        .withOpacity(0.7), // Slight opacity for less emphasis
+                    color: Colors.white.withOpacity(0.7),
                     fontSize: 14,
                   ),
                 ),
               ),
-              verticalSpace(50), // Space before button
+              verticalSpace(50),
               MyButton(
                 gradient: const LinearGradient(
                     begin: Alignment.centerLeft,
@@ -59,11 +58,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              verticalSpace(20), // Space before terms and conditions text
+              verticalSpace(20),
               const TermsAndConditions(),
-              verticalSpace(20), // Space before the sign-up prompt
+              verticalSpace(20),
               const DontHaveAnAccount(),
-              const BuildBlocListener() // Bloc listener for state changes
+              const BuildBlocListener()
             ],
           ),
         ),

@@ -5,16 +5,16 @@ import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/fonts.dart';
 import '../../../../core/widgets/my_text_form_field.dart';
 
-class EmailAndPassword extends StatefulWidget {
-  const EmailAndPassword({
+class LogInFormField extends StatefulWidget {
+  const LogInFormField({
     super.key,
   });
 
   @override
-  State<EmailAndPassword> createState() => _EmailAndPasswordState();
+  State<LogInFormField> createState() => _LogInFormFieldState();
 }
 
-class _EmailAndPasswordState extends State<EmailAndPassword> {
+class _LogInFormFieldState extends State<LogInFormField> {
   bool isObsecure = true;
   late TextEditingController emailController;
   late TextEditingController passwordController;

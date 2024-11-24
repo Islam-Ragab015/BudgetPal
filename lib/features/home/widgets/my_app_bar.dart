@@ -19,7 +19,7 @@ class MyAppBar extends StatelessWidget {
               color: Colors.white,
               size: 30,
             )),
-        Text(
+        const Text(
           "My Wallet",
           style: FontHelper.font18BoldWhite,
         ),

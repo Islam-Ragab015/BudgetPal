@@ -27,6 +27,11 @@ class FontHelper {
     fontSize: 16,
     fontWeight: FontWeight.normal,
   );
+  static const TextStyle font16RegularWhite = TextStyle(
+      fontFamily: 'Poppins',
+      fontSize: 16,
+      fontWeight: FontWeight.normal,
+      color: Colors.white);
 
   static const TextStyle font28SemiBoldWhite = TextStyle(
       fontFamily: 'Poppins',

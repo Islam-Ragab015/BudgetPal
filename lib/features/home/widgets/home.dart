@@ -25,7 +25,7 @@ class Home extends StatelessWidget {
               verticalSpace(20),
               const Align(
                   alignment: Alignment.centerLeft,
-                  child: const Text("Top Transactions",
+                  child: Text("Top Transactions",
                       style: FontHelper.font18BoldWhite)),
               verticalSpace(20),
               // const PercentsWidget(),
