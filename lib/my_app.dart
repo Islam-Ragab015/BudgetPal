@@ -1,5 +1,5 @@
-import 'package:budget_pal/core/routing/routes.dart';
 import 'package:budget_pal/core/routing/routing.dart';
+import 'package:budget_pal/home_or_login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -15,12 +15,12 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Budget pal',
+        title: 'Budget Pal',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        initialRoute: Routes.login,
+        home: const HomeOrLogin(),
         onGenerateRoute: routing.generateRoute,
       ),
     );

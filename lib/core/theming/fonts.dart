@@ -6,6 +6,8 @@ class FontHelper {
       fontSize: 18,
       fontWeight: FontWeight.bold,
       color: Colors.white);
+  static const TextStyle font18White =
+      TextStyle(fontFamily: 'Poppins', fontSize: 18, color: Colors.white);
   static const TextStyle font18GreyW300 = TextStyle(
       fontFamily: 'Poppins',
       fontSize: 18,

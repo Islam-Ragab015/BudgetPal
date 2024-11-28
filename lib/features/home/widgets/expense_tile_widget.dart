@@ -18,7 +18,7 @@ class ExpenseTileWidget extends StatelessWidget {
       child: Stack(
         children: [
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -26,12 +26,12 @@ class ExpenseTileWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "Electricity",
+                      "Dining Out",
                       style: FontHelper.font18BoldWhite,
                     ),
                     verticalSpace(10),
                     const Text(
-                      "2 June,2024",
+                      "Nov 26",
                       style: FontHelper.font13GreyW300,
                     ),
                   ],
@@ -39,7 +39,7 @@ class ExpenseTileWidget extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.only(right: 20),
                   child: Text(
-                    "-200 EGP",
+                    "-200 \$",
                     style: FontHelper.font18BoldWhite,
                   ),
                 )

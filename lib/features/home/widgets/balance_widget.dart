@@ -28,7 +28,7 @@ class BalanceWidget extends StatelessWidget {
               ),
               verticalSpace(5),
               const Text(
-                '1000 EGP',
+                '1000 \$',
                 style: FontHelper.font28SemiBoldWhite,
               ),
             ],
