@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 class ExpenseTileWidget extends StatelessWidget {
   const ExpenseTileWidget({
     super.key,
+    required String title,
+    required String amount,
+    required String type,
   });
 
   @override
